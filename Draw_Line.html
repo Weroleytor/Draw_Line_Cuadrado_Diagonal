@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Design.css">
+
+</head>
+<body>
+    
+    <h2>Canvas para dibujar línea</h2>
+    <br>
+
+    <h3>Selecciona un método para dibujar la línea</h3>
+    <input type="radio" id="basico" name="metodo" value="Básico" checked>
+    <label for="basico">Básico</label><br>
+    <input type="radio" id="DDA" name="metodo" value="DDA">
+    <label for="dda">DDA</label><br>
+    <input type="radio" id="bresenham" name="metodo" value="Bresanham">
+    <label for="bresenham">Bresenham</label> <br>
+    <input type="radio" id="Rectangulo" name="metodo" value="Rectangulo" checked>
+    <label for="Rectangulo">Rectangulo</label> <br>
+    <input type="radio" id="Cuadrado" name="metodo" value="Cuadrado" checked>
+    <label for="Cuadrado">Cuadrado</label>
+
+    <br><br>
+
+    <h2>Tiempos necesarios para realizar los cálculos:</h2>
+    
+    
+
+    <div id="tiempo_basico">Básico:</div>
+    <div id="tiempo_dda">DDA:</div>
+    <div id="tiempo_bresenham">Bresenham:</div>
+
+    
+    <br><br>
+    <input onclick="Benchmark()" type="button" id="Benchmark" name="Benchmark" value="Benchmark">
+    
+    <br><br>
+    <!-- <div id="click_pos_1">Las coordenadas del primer click son: X<sub>1</sub>[0] y Y<sub>1</sub>[0]</div>
+    <div id="click_pos_2">Las coordenadas del segundo click son: X<sub>2</sub>[0] y Y<sub>2</sub>[0]</div> -->
+    
+    
+    <canvas id="canvas" width="1002" height="1002"></canvas>
+
+    <br><br>
+
+    <h3>Coordenadas que sigue la línea de un punto al otro:</h3>
+    <div id="listado_coordenadas"></div>
+
+
+    <script src="Formulas_Draw_Line.js"></script>
+    <script src="metodo_basico.js"></script>
+    <script src="metodo_dda.js"></script>
+    <script src="metodo_bresenham.js"></script>
+    <script src="boton_benchmark.js"></script>
+    <script src="rectangulo.js"></script>
+    <script src="cuadrado.js"></script>
+
+</body>
+</html>
+
